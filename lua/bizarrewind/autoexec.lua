@@ -21,7 +21,7 @@ local function get_command()
 	local command = nil
 	if filetype == "c" then
 		--	command = string.format("gcc %s -o %s && ./%s", filepath, "output", "output")
-		command = string.format("gcc %s   && ./a", filepath)
+		command = string.format("gcc %s   && ./a.out", filepath)
 	elseif filetype == "java" then
 		command = string.format("java %s", filepath)
 	else

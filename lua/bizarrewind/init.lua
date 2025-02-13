@@ -1,5 +1,4 @@
 --
-print("Hello, you are using Neovim!")
 -- Ensure lazy.nvim is installed
 -- Load other configurations like keymaps, options, etc.
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -16,7 +15,9 @@ vim.opt.rtp:prepend(lazypath)
 -- Now you can load plugins with Lazy.nvim
 require("lazy").setup({
 	-- Add more plugin configs as needed
+	require("bizarrewind/plugins/alpha"),
 	require("bizarrewind/plugins/gitsigns"),
+	require("bizarrewind/plugins/rose-pine"),
 
 	require("bizarrewind/plugins/which-key"),
 
@@ -26,11 +27,11 @@ require("lazy").setup({
 
 	require("bizarrewind/plugins/conform"),
 
-	--	require("bizarrewind/plugins/autocmp"),
+	--require("bizarrewind/plugins/autocmp"),
 
 	require("bizarrewind/plugins/blink-cmp"),
 
-	require("bizarrewind/plugins/tokyonight"),
+	-- require("bizarrewind/plugins/tokyonight"),
 
 	require("bizarrewind/plugins/todo-comments"),
 

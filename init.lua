@@ -1,5 +1,6 @@
 require("bizarrewind")
 
+vim.o.shell = "/bin/zsh"
 -- Highlight groups for transparent background
 --
 -- From Priomogen

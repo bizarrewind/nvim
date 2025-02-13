@@ -12,6 +12,7 @@ vim.keymap.set("n", "<leader>b", "<cmd>enew<CR>", { desc = "buffer new" })
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+vim.keymap.set("n", ";", ":")
 vim.keymap.set("i", "jk", "<Esc>")
 --vim.keymap.set("i", "gh", " sdfasdf asdfasdffjhor(int i = 0; i < n; i++){}")
 

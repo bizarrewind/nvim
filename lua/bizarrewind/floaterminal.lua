@@ -67,6 +67,7 @@ local function send_to_terminal(job_id, command)
 		print("No terminal job found")
 		return
 	end
+	vim.fn.chansend(job_id, "clear\r\n")
 	vim.fn.chansend(job_id, command .. "\r\n")
 	vim.cmd("startinsert")
 end
@@ -82,7 +83,7 @@ local function autoexec2()
 	local command = nil
 
 	if filetype == "c" then
-		command = string.format("gcc %s && ./a", filepath)
+		command = string.format("gcc %s && ./a.out", filepath)
 	elseif filetype == "java" then
 		command = string.format("java %s", filepath)
 	else
@@ -99,7 +100,6 @@ local function autoexec2()
 	end
 end
 
-vim.keymap.set({ "n", "t" }, "<space>xe", function()
+vim.keymap.set({ "n", "t" }, "<space>eu", function()
 	autoexec2()
 end)
-
